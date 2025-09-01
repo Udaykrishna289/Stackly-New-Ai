@@ -1,0 +1,324 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.lora-text {
+  font-family: 'Lora', serif !important;
+}
+.lancelot-text {
+  font-family: 'Lancelot', serif !important;
+}
+.poppins-font {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+
+
+
+@font-face {
+  font-family: inter;
+  src: url("./assets/fonts/Inter_18pt-Light.ttf");
+}
+
+a.active{
+  color: #007b82;
+}
+
+/* Home */
+.marquee-container {
+  width: 100%;
+  height: 46px;
+  top: 24px;
+  opacity: 1;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) -15.38%,
+    rgba(154, 77, 255, 0.4) 48.58%,
+    rgba(0, 0, 0, 0) 112.53%
+  );
+  backdrop-filter: blur(3px);
+}
+
+
+/* 🔽 Apply for screen widths less than 441px */
+@media screen and (max-width: 440px) {
+  .marquee-container {
+    width: 440px;
+    height: 46px;
+  }
+}
+
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1;
+  max-width: 1279px;
+  width: 1440px;
+  height: 24px;
+  top: 11px;
+  opacity: 1;
+
+}
+
+
+/* 🔽 Styles for screen widths less than 441px */
+@media screen and (max-width: 440px) {
+  .marquee-content {
+    width: 1279px;
+    height: 24px;
+    position: absolute;
+    top: 11px;
+    left: -419px;
+  }
+}
+
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  width: 945px;
+  height: 21px;
+  opacity: 1;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500; /* Medium */
+  font-style: normal; /* Regular */
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* 🔽 Styles for screen widths less than 441px */
+@media screen and (max-width: 440px) {
+  .marquee-text {
+    width: 785px;
+    height: 15px;
+    position: relative;
+    top: -1px;
+    left: 274px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px; /* 100% of 12px */
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+ @keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+
+.home-bg-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url("./assets/home/sec3/Bg\ image.png") center/cover no-repeat;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.home-bg-img > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes homeEntranceR {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes homeSide {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(10%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-10%);
+    opacity: 1;
+  }
+}
+
+.home-bg-img .design {
+  animation: homeEntranceR 3s ease forwards 3s 1;
+}
+
+.ul-list > ul {
+  max-width: 405px;
+  width: 100%;
+  min-height: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ul-list > ul > li {
+  color: white;
+  list-style: none;
+
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 140%;
+
+  text-align: center;
+}
+.ul-list > ul > li::before {
+  content: ".";
+  color: aqua;
+  font-size: 50px;
+  margin: 10px;
+}
+
+/* ✅ CHANGE THE DOT ON SCREENS < 440px */
+@media (max-width: 440px) {
+  .ul-list > ul > li::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: aqua;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+}
+
+
+/*Api page table colors*/
+.gradient-bg {
+  background: linear-gradient(90deg, #007B82 0%, #001A1C 100%);
+  color: white;
+}
+
+/*Api page table colors*/
+.bg-header-teal {
+  background-color: #00B0BA1F;
+}
+
+/* ==========MEDIA QUERRY FOR MOBILE VERSION=========== */
+/* @media only screen and (max-width: 440px) {
+  footer {
+    display: none !important;
+  }
+} */
+/* @media only screen and (max-width: 425px) {
+  .bg-cover {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+  
+ 
+} */
+/* @media only screen and (max-width: 440px) {
+  header {
+    display: none !important;
+  }
+
+ 
+} */
+/* Success toast */
+/* Success Toast */
+/* Success Toast */
+.Toastify__toast--success {
+  background: linear-gradient(
+    95.92deg,
+    rgba(138, 56, 245, 0.5) 15.32%,
+    rgba(194, 44, 162, 0.5) 99.87%
+  ) !important;
+  color: #ffffff !important;
+  border: 1px solid #C22CA299 !important;
+  border-radius: 12px !important;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Error Toast */
+.Toastify__toast--error {
+  background: linear-gradient(
+    95.92deg,
+    rgba(138, 56, 245, 0.5) 15.32%,
+    rgba(194, 44, 162, 0.5) 99.87%
+  ) !important;
+  color: #ffffff !important;
+  border: 1px solid #C22CA299 !important;
+  border-radius: 12px !important;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Info Toast */
+.Toastify__toast--info {
+  background: linear-gradient(
+    95.92deg,
+    rgba(138, 56, 245, 0.5) 15.32%,
+    rgba(194, 44, 162, 0.5) 99.87%
+  ) !important;
+  color: #ffffff !important;
+  border: 1px solid #C22CA299 !important;
+  border-radius: 12px !important;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Toast body text */
+.Toastify__toast-body {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff !important;
+}
+
